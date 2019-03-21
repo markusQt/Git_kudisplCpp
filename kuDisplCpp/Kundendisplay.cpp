@@ -148,8 +148,6 @@ void Kundendisplay::run()
     const int frameDelay = 1000/FPS;
     Uint32 frameStart;
     int frameTime=0;
-
-
     std::thread t1(doSlideShow,listeBilder,mDestRect,mRenderer);
     t1.detach();
     int cnt = 0;

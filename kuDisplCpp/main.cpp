@@ -3,13 +3,6 @@
 #include "Kundendisplay.h"
 
 
-void testfunc(){
-
-
-
-}
-
-
 int main(){
 
     Kundendisplay mKundendisplay;
