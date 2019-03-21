@@ -1,0 +1,16 @@
+[BILDER]
+blutdruck.png
+image010.png
+image012.png
+image006.png
+image009.png
+image005.png
+image008.png
+image011.png
+image003.png
+image004.png
+image002.png
+image007.png
+[FILME]
+otriven_810x530.mp4
+voltaren_810x530.mp4

@@ -1,0 +1,47 @@
+# depslib dependency file v1.0
+1553152620 source:/home/pi/kuDisplCpp/kuDisplCpp/main.cpp
+	<iostream>
+	<thread>
+	"Kundendisplay.h"
+
+1553083312 /home/pi/kuDisplCpp/kuDisplCpp/include/Kundendisplay.h
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+	<vector>
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	"Texturemanager.h"
+
+1553070249 /home/pi/kuDisplCpp/kuDisplCpp/include/Texturemanager.h
+	<iostream>
+	"Kundendisplay.h"
+
+1553078724 source:/home/pi/kuDisplCpp/kuDisplCpp/src/Kundendisplay.cpp
+	"Kundendisplay.h"
+
+1553071140 source:/home/pi/kuDisplCpp/kuDisplCpp/src/Texturemanager.cpp
+	"Texturemanager.h"
+
+1553151998 /home/pi/kuDisplCpp/kuDisplCpp/Kundendisplay.h
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+	<vector>
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<thread>
+	"Texturemanager.h"
+
+1553070249 /home/pi/kuDisplCpp/kuDisplCpp/Texturemanager.h
+	<iostream>
+	"Kundendisplay.h"
+
+1553071140 source:/home/pi/kuDisplCpp/kuDisplCpp/Texturemanager.cpp
+	"Texturemanager.h"
+
+1553150415 source:/home/pi/kuDisplCpp/kuDisplCpp/Kundendisplay.cpp
+	"Kundendisplay.h"
+
