@@ -45,3 +45,29 @@
 1553150415 source:/home/pi/kuDisplCpp/kuDisplCpp/Kundendisplay.cpp
 	"Kundendisplay.h"
 
+1553155725 source:/home/pi/git_workspace/Git_kudisplCpp/kuDisplCpp/Kundendisplay.cpp
+	"Kundendisplay.h"
+
+1553155725 /home/pi/git_workspace/Git_kudisplCpp/kuDisplCpp/Kundendisplay.h
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+	<vector>
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<thread>
+	"Texturemanager.h"
+
+1553155725 /home/pi/git_workspace/Git_kudisplCpp/kuDisplCpp/Texturemanager.h
+	<iostream>
+	"Kundendisplay.h"
+
+1553155725 source:/home/pi/git_workspace/Git_kudisplCpp/kuDisplCpp/main.cpp
+	<iostream>
+	<thread>
+	"Kundendisplay.h"
+
+1553155725 source:/home/pi/git_workspace/Git_kudisplCpp/kuDisplCpp/Texturemanager.cpp
+	"Texturemanager.h"
+
