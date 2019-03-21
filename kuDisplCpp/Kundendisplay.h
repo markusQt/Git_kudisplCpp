@@ -8,6 +8,8 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include <thread>
+#include <opencv.hpp>
+#include <highgui/highgui.hpp>
 #include "Texturemanager.h"
 
 
@@ -29,7 +31,7 @@ class Kundendisplay
         void clearAll_SDL();
         void threadPictureShow();
         static void doSlideShow(std::vector<std::string> listeBilder,SDL_Rect destRect, SDL_Renderer *renderer);
-
+        static void doFilmShow(std::vector<std::string> listeFilme,SDL_Rect destRect, SDL_Renderer *renderer);
         void getMediaInfo();
         void handleEvents();
         void update();

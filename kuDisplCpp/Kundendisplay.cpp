@@ -15,6 +15,41 @@
 
 }
 
+void Kundendisplay::doFilmShow(std::vector<std::string> listeFilme,SDL_Rect destRect, SDL_Renderer *renderer){
+
+   for (int i = 0 ; i <= listeFilme.size()-1;i++){
+        std::cout << "Thread: "<<listeFilme.at(i)<<std::endl;
+        std::string film = listeFilme.at(i);
+       // cv::VideoCapture cap(film);
+      /*  if(!cap.isOpened()){
+            std::cout << "Konnte den Film : " <<listeFilme.at(i)<<"nicht oeffnen"<<std::endl;
+           return;*
+        }
+
+        while(1){
+            cv::Mat frame;
+            cap >> frame;
+            if (frame.empty()){
+                break;
+            }
+            cv::imshow("Frame",frame);
+            cv::waitKey(10);
+
+        }
+        cap.release();*/
+
+
+
+      /*  SDL_Texture *tmpPlayerTex= Texturemanager::loadTexture(listeFilme.at(i).c_str(),renderer);
+        SDL_RenderClear(renderer);
+        SDL_RenderCopy(renderer,tmpPlayerTex,NULL,&destRect);
+        SDL_RenderPresent(renderer);*/
+
+   }
+
+    //cv::destroyWindow("Frame");
+
+}
 
 
 
@@ -65,42 +100,9 @@ void Kundendisplay::handleEvents()
                 gameIsRunning=false;
                 break;
             }
-            if(myEvent.key.state == SDLK_w){
-               mDestRect.y += -speedH;
-            }
-            if(myEvent.key.keysym.sym == SDLK_s){
-               mDestRect.y += speedH;
-            }
-            if(myEvent.key.keysym.sym == SDLK_a){
-               mDestRect.x += -speedV;
-            }
-            if(myEvent.key.keysym.sym == SDLK_d){
-               mDestRect.x += speedV;
-            }
-
-        }
-
-        if(myEvent.type ==  SDL_KEYUP ){
-
-            if(myEvent.key.keysym.sym == SDLK_w){
-               mDestRect.y += 0;
-            }
-            if(myEvent.key.keysym.sym == SDLK_s){
-               mDestRect.y += 0;
-            }
-            if(myEvent.key.keysym.sym == SDLK_a){
-               mDestRect.x += 0;
-            }
-
-            if(myEvent.key.keysym.sym == SDLK_a){
-               mDestRect.x += 0;
-            }
-            if(myEvent.key.keysym.sym == SDLK_d){
-               mDestRect.x += 0;
-            }
-
         }
     }
+
 }
 
 void Kundendisplay::update()
@@ -148,8 +150,12 @@ void Kundendisplay::run()
     const int frameDelay = 1000/FPS;
     Uint32 frameStart;
     int frameTime=0;
-    std::thread t1(doSlideShow,listeBilder,mDestRect,mRenderer);
-    t1.detach();
+   // std::thread threadDiaShow(doSlideShow,listeBilder,mDestRect,mRenderer);
+   // threadDiaShow.detach();
+
+    std::thread threadFilmShow(doFilmShow,listeBilder,mDestRect,mRenderer);
+    threadFilmShow.detach();
+
     int cnt = 0;
     while (gameIsRunning){
     cnt ++;
